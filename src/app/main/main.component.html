@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="alert alert-danger fixed-top" style="opacity: 0.8;" role="alert" *ngIf="!alreadySubmitted">
+       שימו לב ! כבר שלחתם אישור הגעה. ניתן לערוך את האישור שלכם על ידי שליחה מחדש של הטופס.
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">החינה של עדי ועוז</h5>
+            <!-- GIF -->
+            <img src="../assets/hamsa-hand.gif" class="card-img-top" alt="...">
+            <!-- content -->
+            <div class="content">
+              <p style="font-size: 1.5em;">
+                הנכם מוזמנים לחינה של
+              </p>
+              <p style="font-size: 2.5em; color: brown;">עדי ועוז</p>
+              <p style="font-size: 1.5em;">שתתקיים ב - 14/06/2023 א"יה, יום ד', כ"ה בסיון התשפ"ג בשעה 19:30 בבית משפחת
+                סקרה, רחוב הדקל 4, טירת כרמל</p>
+              <p>(: בואו עם הרבה מצב רוח</p>
+              <br>
+              <p>אנא אשרו הגעה בתחתית העמוד</p>
+            </div>
+            <!-- First Name -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">שם פרטי</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" [placeholder]=firstName disabled>
+            </div>
+            <!-- Last Name -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">שם משפחה</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" [placeholder]=lastName disabled>
+            </div>
+            <!-- attendance buttons -->
+            <div class="attendanc">
+              <p>?האם הנכם מגיעים</p>
+              <div class="row">
+                <button class="btn btn-outline-secondary" type="button" style="width: 40%;"
+                  (click)="clickAttend(true)">כן</button>
+              </div>
+              <div class="row">
+                <button class="btn btn-outline-secondary" type="button" style="width: 40%;"
+                  (click)="clickAttend(false)">לא</button>
+              </div>
+              <br>
+            </div>
+            <!-- Plus Minus buttons -->
+  
+            <div class="input-group" *ngIf="attend">
+              <div class="container text-center">
+                <div class="row">
+                  <p>?כמה תהיו</p>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button class="btn btn-outline-secondary minus-btn" type="button" (click)="substract()">-</button>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" id="quantity" [value]="count" style="text-align: center;">
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-outline-secondary plus-btn" type="button" (click)="add()">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div>
+              <button class="btn btn-outline-secondary" *ngIf="showSubmit"
+              (click)="submit()" type="button">שלחו אישור הגעה</button>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="container text-center">
+              <a href="https://ul.waze.com/ul?utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
+                <img src="../assets/waze.jpg" alt="" style="max-width: 50px;">
+              </a>
+              <div class="container text-center" style="font-family: 'Rubik Spray Paint', cursive;">נווטו למקום</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

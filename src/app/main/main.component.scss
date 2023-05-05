@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
+
+
+.row{
+    justify-content: center;
+    align-content: center;
+}
+.card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-align: center;
+    // margin-top: 10%;
+    background-color: rgb(255, 203, 162);
+    // background-image: url('../assets/henna-background.jpg');
+}
+input {
+    text-align: right;
+}
+.counter {
+    text-align: center;
+}
+
+h5 {
+    font-size: 2.5em;
+    font-family: 'Rubik Spray Paint', cursive;
+}
+img {
+    border-radius: 10px;
+}
+.content {
+    // font-size: 2em;
+    font-family: 'Rubik Spray Paint', cursive;
+}
+.content {
+    padding: 20px;
+}
+.attendanc {
+    button {
+        margin: 3px;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "adi-oz-henna"
+  },
+  "targets": {
+    "adi-oz-henna": {
+      "hosting": {
+        "adi-oz-henna-landing-page": [
+          "adi-oz-henna"
+        ]
+      }
+    }
+  }
+}
